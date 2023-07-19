@@ -15,5 +15,7 @@ Wim.use_default_plugins = function()
         { 'ellisonleao/gruvbox.nvim', priority = 1000 },
         -- Which Key --
         { 'folke/which-key.nvim', lazy = false},
+        -- lualine --
+        { 'nvim-lualine/lualine.nvim', priority = 1000 }
     }
 end

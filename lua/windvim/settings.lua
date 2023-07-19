@@ -1,7 +1,7 @@
 -- [[ SETTINGS ]] --
 vim.opt.backup       = false
 vim.opt.clipboard    = 'unnamedplus'
-vim.opt.cmdheight    = 2
+vim.opt.cmdheight    = 1
 vim.opt.fileencoding = 'utf-8'
 vim.opt.mouse        = 'a'
 vim.opt.showmode     = false
@@ -20,7 +20,7 @@ vim.opt.cursorline     = true
 vim.opt.cursorcolumn   = false
 vim.opt.wrap           = false
 vim.opt.signcolumn     = 'yes'
-vim.opt.scrolloff      = 10
+vim.opt.scrolloff      = 8
 vim.opt.isfname:append '@-@'
 vim.opt.sidescrolloff  = 15
 vim.opt.guifont        = 'monospace:h17'

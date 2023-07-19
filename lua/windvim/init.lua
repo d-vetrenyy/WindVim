@@ -14,6 +14,15 @@ Wim.use_keymaps  = function()
 	require 'windvim.keymaps'
 end
 
+Wim.use_statusline = function()
+    require('lualine').setup {
+        options = {
+            theme = 'auto',
+            component_separators = '┃',
+        },
+    }
+end
+
 Wim.set_default_theme = function()
     vim.o.background  = 'dark'
     require('gruvbox').setup {
@@ -23,7 +32,7 @@ Wim.set_default_theme = function()
         italic        = {
             strings   = false, -- default: true
             comments  = false, -- default: true
-            operators = false,  -- default: false
+            opeators = false,  -- default: false
             folds     = true
         },
         strikethrough        = true,   -- ???
