@@ -14,8 +14,11 @@ Wim.use_default_plugins = function()
         -- Gruvbox Theme --
         { 'ellisonleao/gruvbox.nvim', priority = 1000 },
         -- Which Key --
-        { 'folke/which-key.nvim', lazy = false},
-        -- lualine --
-        { 'nvim-lualine/lualine.nvim', priority = 1000 }
+        { 'folke/which-key.nvim', lazy = true },
+        -- Lualine --
+        { 'nvim-lualine/lualine.nvim', priority = 1000 },
+        -- Telescope --
+        { 'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        dependencies = {'nvim-lua/plenary.nvim'}, lazy = true }
     }
 end

@@ -18,9 +18,21 @@ Wim.use_statusline = function()
     require('lualine').setup {
         options = {
             theme = 'auto',
-            component_separators = '┃',
+            section_separators  = '',
+            component_separators = { left = '', right = '┃' },
+        },
+        sections = {
+            lualine_x = { 'fileformat', 'filetype' },
+            lualine_y = {}
         },
     }
+end
+
+Wim.use_telescope = function()
+    local builtin = require('telescope.builtin')
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+    vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 end
 
 Wim.set_default_theme = function()

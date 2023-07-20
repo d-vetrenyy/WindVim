@@ -19,7 +19,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline     = true
 vim.opt.cursorcolumn   = false
 vim.opt.wrap           = false
-vim.opt.signcolumn     = 'yes'
+-- vim.opt.signcolumn     = 'yes'
 vim.opt.scrolloff      = 8
 vim.opt.isfname:append '@-@'
 vim.opt.sidescrolloff  = 15
@@ -55,3 +55,30 @@ vim.cmd [[
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.exe,*.gif,*.pdf,*.pyc,*.flv,*.mp3,*.img,*.xlsx,*.wav
 ]]
+
+--- for Neovide ---
+if vim.g.neovide then
+    vim.opt.linespace = 0
+    vim.g.neovide_scale_factor = 1.0
+    -- padding
+    vim.g.neovide_padding_top    = 6
+    vim.g.neovide_padding_bottom = 6
+    vim.g.neovide_padding_right  = 6
+    vim.g.neovide_padding_left   = 6
+    --
+    vim.g.neovide_transparency   = 1.0
+    vim.g.neovide_scroll_animation_length = 2.0
+    vim.g.neovide_hide_mouse_when_typing = true
+    vim.g.neovide_theme = 'dark'
+    vim.g.neovide_refresh_rate = 60
+    vim.g.neovide_refresh_rate_idle = 5
+    vim.g.neovide_profiler = false
+    vim.g.neovide_no_idle = true
+    vim.g.neovide_fullscreen = true
+    vim.g.neovide_remember_window_size = true
+    vim.g.neovide_cursor_animate_in_insert_mode = true
+    vim.g.neovide_cursor_animate_command_line = true
+    vim.g.neovide_cursor_vfx_mode = "pixiedust"
+    vim.g.neovide_cursor_trail_size = 0.6
+
+end
